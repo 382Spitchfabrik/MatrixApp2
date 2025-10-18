@@ -51,5 +51,14 @@ namespace MatrixLib.Tests
             int[] result = MatrixHelper.FindPositiveColumns(matrix);
             Assert.AreEqual(0, result.Length);
         }
+
+        [TestMethod]
+        public void IsColumnPositive_EmptyArray_ReturnsFalse()
+        {
+            double[] col = new double[0];
+            bool result = MatrixHelper.IsColumnPositive(col);
+            Assert.IsFalse(result);
+        }
+
     }
 }
