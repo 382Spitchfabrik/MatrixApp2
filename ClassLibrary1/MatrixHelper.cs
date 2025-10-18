@@ -38,5 +38,16 @@ namespace MatrixLib
 
             return list.ToArray();
         }
+       
+        public static string GetMatrixInfo(double[,] matrix)
+        {
+            if (matrix == null)
+                return "Matrix is null";
+
+            int rows = matrix.GetLength(0);
+            int cols = matrix.GetLength(1);
+
+            return $"Matrix size: {rows}x{cols}, Total elements: {rows * cols}";
+        }
     }
 }
